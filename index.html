@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online HEIC to JPG Converter | 100% Local & Private</title>
+    <meta name="description" content="Convert HEIC and WebP images to JPG directly in your browser. No upload, fast, secure, and free.">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/heic2any@0.0.12/dist/heic2any.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/webp-converter@2.4.0/WebP-converter.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">HEIC & WebP to JPG – 100% local converter</h1>
+            <p class="header-subtitle">
+                <span class="privacy-shield">🔒</span> Convert your images directly in your browser. **Nothing is uploaded**, everything stays on your device.
+            </p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div id="ads-top" class="ad-container">
+                <p>— AD SPACE —</p>
+            </div>
+
+            <section class="card" aria-labelledby="upload-heading">
+                <h2 id="upload-heading" class="card-title">1. Importer vos images</h2>
+
+                <div id="drop-zone" class="drop-zone">
+                    <input type="file" id="file-input" accept=".heic, .heif, .webp, image/jpeg, image/png" multiple hidden>
+                    <p class="drop-zone-text">
+                        Glissez-déposez vos images ici ou <a href="#" id="upload-link">cliquez pour sélectionner vos fichiers</a>
+                        <br>(.heic, .heif, .webp, .png, .jpg)
+                    </p>
+                    <button id="select-files-btn" class="btn btn-primary">Choisir des fichiers</button>
+                </div>
+
+                <div id="file-list-container" class="file-list-container hidden">
+                    <h3>Fichiers sélectionnés :</h3>
+                    <div id="file-list" class="file-list">
+                        </div>
+                </div>
+            </section>
+
+            <section class="card" aria-labelledby="actions-heading">
+                <h2 id="actions-heading" class="card-title">2. Lancer la conversion</h2>
+                <div class="actions">
+                    <button id="convert-btn" class="btn btn-action">
+                        <span id="convert-text">Convertir en JPG</span>
+                        <span id="converting-spinner" class="spinner hidden"></span>
+                    </button>
+                    <button id="download-all-btn" class="btn btn-secondary hidden">Tout télécharger (ZIP)</button>
+                </div>
+            </section>
+
+            <section class="card" aria-labelledby="results-heading">
+                <h2 id="results-heading" class="card-title">3. Résultats</h2>
+                <div id="results-list" class="results-list">
+                    <p class="initial-message">Les résultats de conversion s'afficheront ici.</p>
+                </div>
+            </section>
+
+            <div id="ads-bottom" class="ad-container">
+                <p>— AD SPACE —</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Made by Rafael Viale - An independent developer </p>
+            <p><a href="#" class="footer-link">Mon autre projet (Placeholder)</a></p>
+        </div>
+    </footer>
+    <p>⚠️ HEIC support: best on Chrome or Edge. Safari can fail with Live Photos & HDR.</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
