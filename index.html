@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online HEIC to JPG Converter | 100% Local & Private</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
     <meta name="description" content="Convert HEIC and WebP images to JPG directly in your browser. No upload, fast, secure, and free.">
     <link rel="stylesheet" href="style.css">
 
@@ -27,39 +28,39 @@
             </div>
 
             <section class="card" aria-labelledby="upload-heading">
-                <h2 id="upload-heading" class="card-title">1. Importer vos images</h2>
+                <h2 id="upload-heading" class="card-title">1. Import your images</h2>
 
                 <div id="drop-zone" class="drop-zone">
                     <input type="file" id="file-input" accept=".heic, .heif, .webp, image/jpeg, image/png" multiple hidden>
                     <p class="drop-zone-text">
-                        Glissez-déposez vos images ici ou <a href="#" id="upload-link">cliquez pour sélectionner vos fichiers</a>
+                        Drag and drop your images here or<a href="#" id="upload-link">click to select your files</a>
                         <br>(.heic, .heif, .webp, .png, .jpg)
                     </p>
                     <button id="select-files-btn" class="btn btn-primary">Choisir des fichiers</button>
                 </div>
 
                 <div id="file-list-container" class="file-list-container hidden">
-                    <h3>Fichiers sélectionnés :</h3>
+                    <h3>Selected files :</h3>
                     <div id="file-list" class="file-list">
                         </div>
                 </div>
             </section>
 
             <section class="card" aria-labelledby="actions-heading">
-                <h2 id="actions-heading" class="card-title">2. Lancer la conversion</h2>
+                <h2 id="actions-heading" class="card-title">2. Start the conversion</h2>
                 <div class="actions">
                     <button id="convert-btn" class="btn btn-action">
-                        <span id="convert-text">Convertir en JPG</span>
+                        <span id="convert-text">Convert to JPG</span>
                         <span id="converting-spinner" class="spinner hidden"></span>
                     </button>
-                    <button id="download-all-btn" class="btn btn-secondary hidden">Tout télécharger (ZIP)</button>
+                    <button id="download-all-btn" class="btn btn-secondary hidden">Download everything (ZIP)</button>
                 </div>
             </section>
 
             <section class="card" aria-labelledby="results-heading">
-                <h2 id="results-heading" class="card-title">3. Résultats</h2>
+                <h2 id="results-heading" class="card-title">3. Results</h2>
                 <div id="results-list" class="results-list">
-                    <p class="initial-message">Les résultats de conversion s'afficheront ici.</p>
+                    <p class="initial-message">Conversion results will be displayed here.</p>
                 </div>
             </section>
 
