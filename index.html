@@ -1,90 +1,172 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7183376670795757"
-     crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online HEIC to JPG Converter | 100% Local & Private</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
-    <meta name="description" content="Convert HEIC and WebP images to JPG directly in your browser. No upload, fast, secure, and free.">
-    <link rel="stylesheet" href="style.css">
-
-    <script src="https://unpkg.com/heic2any@0.0.12/dist/heic2any.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/webp-converter@2.4.0/WebP-converter.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEIC Converter – Local & Private | by Rovial</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+  <meta name="description" content="Convert HEIC and WebP images to JPG directly in your browser. No upload, fast, secure, and free. A Rovial tool.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7183376670795757" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/heic2any@0.0.12/dist/heic2any.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/webp-converter@2.4.0/WebP-converter.min.js"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1 class="header-title">HEIC & WebP to JPG – 100% local converter</h1>
-            <p class="header-subtitle">
-                <span class="privacy-shield">🔒</span> Convert your images directly in your browser. Nothing is uploaded, everything stays on your device.
-            </p>
-        </div>
-    </header>
 
-    <main class="main">
-        <div class="container">
-            <div id="ads-top" class="ad-container">
-                <p>— AD SPACE —</p>
-            </div>
-
-            <section class="card" aria-labelledby="upload-heading">
-                <h2 id="upload-heading" class="card-title">1. Import your images</h2>
-
-                <div id="drop-zone" class="drop-zone">
-                    <input type="file" id="file-input" accept=".heic, .heif, .webp, image/jpeg, image/png" multiple hidden>
-                    <p class="drop-zone-text">
-                        Drag and drop your images here or<a href="#" id="upload-link"> click to select your files</a>
-                        <br>(.heic, .heif, .webp, .png, .jpg)
-                    </p>
-                    <button id="select-files-btn" class="btn btn-primary">Choose files</button>
-                </div>
-
-                <div id="file-list-container" class="file-list-container hidden">
-                    <h3>Selected files :</h3>
-                    <div id="file-list" class="file-list">
-                        </div>
-                </div>
-            </section>
-
-            <section class="card" aria-labelledby="actions-heading">
-                <h2 id="actions-heading" class="card-title">2. Start the conversion</h2>
-                <div class="actions">
-                    <button id="convert-btn" class="btn btn-action">
-                        <span id="convert-text">Convert to JPG</span>
-                        <span id="converting-spinner" class="spinner hidden"></span>
-                    </button>
-                    <button id="download-all-btn" class="btn btn-secondary hidden">Download everything (ZIP)</button>
-                </div>
-            </section>
-
-            <section class="card" aria-labelledby="results-heading">
-                <h2 id="results-heading" class="card-title">3. Results</h2>
-                <div id="results-list" class="results-list">
-                    <p class="initial-message">Conversion results will be displayed here.</p>
-                </div>
-            </section>
-
-            <div id="ads-bottom" class="ad-container">
-                <p>— AD SPACE —</p>
-            </div>
-
-        </div>
-    </main>
-
-    <footer class="footer">
-    <div class="container">
-        <p>Made by Rafael Viale - An independent developer</p>
-        <p>
-            <a href="#" class="footer-link">My other project (Placeholder)</a> ·
-            <a href="privacy.html" class="footer-link">Privacy Policy</a>
-        </p>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="https://rovial.fr" target="_blank" rel="noopener noreferrer" class="nav-logo" aria-label="Rovial">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#4f98a3"/>
+          <path d="M8 10h10a6 6 0 0 1 0 12H8V10z" fill="none" stroke="white" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M18 22l6 0" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        <span class="nav-logo-text">Rovial</span>
+        <span class="nav-badge">Tools</span>
+      </a>
+      <div class="nav-links">
+        <a href="https://rovial.fr" target="_blank" rel="noopener noreferrer" class="nav-link">Back to Rovial</a>
+        <a href="privacy.html" class="nav-link">Privacy</a>
+      </div>
     </div>
-</footer>
+  </nav>
 
-    <p>⚠️ HEIC support: best on Chrome or Edge. Safari can fail with Live Photos & HDR.</p>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-eyebrow">
+        <span class="badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          100% Local — nothing uploaded
+        </span>
+      </div>
+      <h1 class="hero-title">HEIC &amp; WebP<br>to JPG Converter</h1>
+      <p class="hero-subtitle">Convert your images directly in your browser.<br>No server, no upload, no data collected.</p>
+    </div>
+  </header>
 
-    <script src="script.js"></script>
+  <main class="main">
+    <div class="container">
+
+      <!-- AD TOP -->
+      <div class="ad-slot ad-slot--top">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7183376670795757"
+             data-ad-slot="AUTO"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- STEP 1 -->
+      <section class="card" aria-labelledby="upload-heading">
+        <div class="card-header">
+          <span class="step-number">01</span>
+          <h2 id="upload-heading" class="card-title">Import your images</h2>
+        </div>
+        <div id="drop-zone" class="drop-zone">
+          <input type="file" id="file-input" accept=".heic,.heif,.webp,image/jpeg,image/png" multiple hidden>
+          <div class="drop-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          </div>
+          <p class="drop-zone-text">Drag &amp; drop your files here or <a href="#" id="upload-link">browse</a></p>
+          <p class="drop-zone-formats">.heic · .heif · .webp · .png · .jpg</p>
+          <button id="select-files-btn" class="btn btn-primary">Choose files</button>
+        </div>
+        <div id="file-list-container" class="file-list-container hidden">
+          <h3 class="file-list-heading">Selected files</h3>
+          <div id="file-list" class="file-list"></div>
+        </div>
+      </section>
+
+      <!-- STEP 2 -->
+      <section class="card" aria-labelledby="actions-heading">
+        <div class="card-header">
+          <span class="step-number">02</span>
+          <h2 id="actions-heading" class="card-title">Convert</h2>
+        </div>
+        <div class="actions">
+          <button id="convert-btn" class="btn btn-action">
+            <span id="convert-text">Convert to JPG</span>
+            <span id="converting-spinner" class="spinner hidden"></span>
+          </button>
+          <button id="download-all-btn" class="btn btn-secondary hidden">Download all (ZIP)</button>
+        </div>
+      </section>
+
+      <!-- AD MID -->
+      <div class="ad-slot ad-slot--mid">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7183376670795757"
+             data-ad-slot="AUTO"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- STEP 3 -->
+      <section class="card" aria-labelledby="results-heading">
+        <div class="card-header">
+          <span class="step-number">03</span>
+          <h2 id="results-heading" class="card-title">Results</h2>
+        </div>
+        <div id="results-list" class="results-list">
+          <p class="initial-message">Conversion results will appear here.</p>
+        </div>
+      </section>
+
+      <!-- AD BOTTOM -->
+      <div class="ad-slot ad-slot--bottom">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7183376670795757"
+             data-ad-slot="AUTO"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- ROVIAL PROMO -->
+      <div class="rovial-promo">
+        <div class="rovial-promo-inner">
+          <div>
+            <p class="rovial-promo-label">Made by</p>
+            <p class="rovial-promo-name">Rovial</p>
+            <p class="rovial-promo-desc">Discover the full platform — portfolio, marketplace, and developer tools.</p>
+          </div>
+          <a href="https://rovial.fr" target="_blank" rel="noopener noreferrer" class="btn btn-primary rovial-promo-cta">Visit Rovial →</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#4f98a3"/>
+          <path d="M8 10h10a6 6 0 0 1 0 12H8V10z" fill="none" stroke="white" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M18 22l6 0" stroke="white" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        <span>A <a href="https://rovial.fr" target="_blank" rel="noopener noreferrer" class="footer-link">Rovial</a> tool by Rafael Viale</span>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html" class="footer-link">Privacy Policy</a>
+        <a href="https://rovial.fr" target="_blank" rel="noopener noreferrer" class="footer-link">rovial.fr</a>
+      </div>
+    </div>
+    <div class="container">
+      <p class="footer-note">⚠️ HEIC support: best on Chrome or Edge. Safari may fail with Live Photos &amp; HDR.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
