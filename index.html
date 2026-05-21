@@ -96,7 +96,6 @@
 
           <!-- STEP 1 -->
           <div class="card" aria-labelledby="upload-heading">
-            <div class="card-step">01</div>
             <h3 id="upload-heading" class="card-title">Import your images</h3>
             <div id="drop-zone" class="drop-zone">
               <input type="file" id="file-input" accept=".heic,.heif,.webp,image/jpeg,image/png" multiple hidden>
@@ -115,7 +114,6 @@
 
           <!-- STEP 2 -->
           <div class="card" aria-labelledby="actions-heading">
-            <div class="card-step">02</div>
             <h3 id="actions-heading" class="card-title">Convert to JPG</h3>
             <p class="card-desc">All conversions happen locally in your browser using WebAssembly. Nothing is sent to any server.</p>
             <div class="actions">
@@ -129,7 +127,6 @@
 
           <!-- STEP 3 -->
           <div class="card" aria-labelledby="results-heading">
-            <div class="card-step">03</div>
             <h3 id="results-heading" class="card-title">Download your results</h3>
             <div id="results-list" class="results-list">
               <p class="empty-msg">Conversion results will appear here.</p>
@@ -161,7 +158,6 @@
 
         <div class="features-grid">
           <div class="feature-card">
-            <div class="feature-num">01</div>
             <h3>HEIC & HEIF decoding</h3>
             <p>
               HEIC (High Efficiency Image Container) is Apple's default photo format since iOS 11.
@@ -171,7 +167,6 @@
             </p>
           </div>
           <div class="feature-card">
-            <div class="feature-num">02</div>
             <h3>WebP conversion</h3>
             <p>
               WebP is a modern image format developed by Google, offering both lossy and lossless compression.
@@ -181,7 +176,6 @@
             </p>
           </div>
           <div class="feature-card">
-            <div class="feature-num">03</div>
             <h3>Privacy by design</h3>
             <p>
               Every file you select stays on your device. The conversion happens inside a sandboxed browser tab,
@@ -190,7 +184,6 @@
             </p>
           </div>
           <div class="feature-card">
-            <div class="feature-num">04</div>
             <h3>Batch download as ZIP</h3>
             <p>
               Convert dozens of files in a single batch and download them all as a ZIP archive — no manual
@@ -368,7 +361,6 @@
 </div>
 
 <script>
-  // Theme toggle
   const html = document.documentElement;
   const btn = document.getElementById('theme-toggle');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
